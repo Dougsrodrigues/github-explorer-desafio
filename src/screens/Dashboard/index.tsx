@@ -56,14 +56,11 @@ export function Dashboard() {
               autoCapitalize="none"
               autoCorrect={false}
             />
-
-            <InputButton
-              testID="input-button"
-              onPress={handleAddRepository}
-              disabled={!!inputText}
-            >
-              <Icon name="search" size={20} />
-            </InputButton>
+            {inputText !== "" && (
+              <InputButton testID="input-button" onPress={handleAddRepository}>
+                <Icon name="search" size={20} />
+              </InputButton>
+            )}
           </Input>
         </AddGithubRepo>
 
