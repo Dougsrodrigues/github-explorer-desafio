@@ -27,6 +27,7 @@ export function Dashboard() {
   const { addRepository, repositories } = useRepositories();
 
   function handleAddRepository() {
+    if (inputText === "") return;
     addRepository(inputText);
 
     setInputText("");
