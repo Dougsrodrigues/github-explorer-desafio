@@ -57,7 +57,11 @@ export function Dashboard() {
               autoCorrect={false}
             />
 
-            <InputButton testID="input-button" onPress={handleAddRepository}>
+            <InputButton
+              testID="input-button"
+              onPress={handleAddRepository}
+              disabled={!!inputText}
+            >
               <Icon name="search" size={20} />
             </InputButton>
           </Input>
